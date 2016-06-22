@@ -67,8 +67,9 @@ controller.hears(['sales chart'], ['direct_message', 'direct_mention'], function
     fallback: text,
     pretext: 'Chart generated for you',
     title: 'Host, deploy and share your bot in seconds.',
-    image_url: 'https://core.opentext.com/pdfjs/web/viewer.html?shortLink=69f2882a6a81b20a4657bd30f27e79374cd89918533be113',
-    title_link: 'http://aviatioexample.actuate.com:8700/iportal/iv?__locale=en_US&__vp=Default%20Volume&volume=Default%20Volume&closex=true&__report=%2FHome%2Fflightdemo%2FInteractive%20Chart%20Filtering%20Details.RPTDOCUMENT%3B1',
+    //image_url: 'https://core.opentext.com/pdfjs/web/viewer.html?shortLink=69f2882a6a81b20a4657bd30f27e79374cd89918533be113',
+    image_url: 'https://drive.google.com/file/d/0By7u_lrk9kyjT0RRcXRmT2IySTg/view?usp=sharing',
+    title_link: '',
     text: text,
     color: '#7CD197'
   }]
