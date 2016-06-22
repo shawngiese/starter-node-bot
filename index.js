@@ -63,7 +63,14 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
     text: text,
     color: '#7CD197'
   }]
-  
+
+  bot.reply(message, {
+    attachments: attachments
+  }, function (err, resp) {
+    console.log(err, resp)
+  })
+})
+
   controller.hears(['PDF'], ['direct_message', 'direct_mention'], function (bot, message) {
   var text = 'Here is your report.'
   var attachments = [{
