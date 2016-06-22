@@ -69,9 +69,8 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
   var attachments = [{
     fallback: text,
     pretext: 'Report generated for you',
-    title: 'Host, deploy and share your bot in seconds.',
-    image_url: 'http://aviatioexample.actuate.com:8700/iportal/executereport.do?__locale=en_US&__vp=Default%20Volume&volume=Default%20Volume&closex=true&__executableName=%2FPublic%2FUnshipped%20Orders%201H2013.rptdesign%3B1&__requesttype=immediate&__format=pdf&__wait=True&userID=flightdemo&password=Demo1234',
-    title_link: 'https://beepboophq.com/',
+    title: 'Download the PDF.',
+    title_link: 'http://aviatioexample.actuate.com:8700/iportal/executereport.do?__locale=en_US&__vp=Default%20Volume&volume=Default%20Volume&closex=true&__executableName=%2FPublic%2FUnshipped%20Orders%201H2013.rptdesign%3B1&__requesttype=immediate&__format=pdf&__wait=True&userID=flightdemo&password=Demo1234',
     text: text,
     color: '#7CD197'
   }]
