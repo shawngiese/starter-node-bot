@@ -52,6 +52,15 @@ controller.hears('help', ['direct_message', 'direct_mention'], function (bot, me
   bot.reply(message, help)
 })
 
+controller.hears('Top sales people', ['direct_message', 'direct_mention'], function (bot, message) {
+  var help = 'The top 5 sales people for today are: \n' +
+      'Bob Smith 18,000 USD\n' +
+      'Julie Sanders 14,000 USD\n' +
+      'Celia Cruthers 14,000 USD\n' +
+      'Nathan Atkins 10,000 USD'
+  bot.reply(message, help)
+})
+
 controller.hears(['Sales chart'], ['direct_message', 'direct_mention'], function (bot, message) {
   var text = 'Here is your chart.'
   var attachments = [{
