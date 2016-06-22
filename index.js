@@ -52,7 +52,7 @@ controller.hears('help', ['direct_message', 'direct_mention'], function (bot, me
   bot.reply(message, help)
 })
 
-controller.hears('Top sales people', ['direct_message', 'direct_mention'], function (bot, message) {
+controller.hears('sales', ['direct_message', 'direct_mention'], function (bot, message) {
   var help = 'The top 5 sales people for today are: \n' +
       'Bob Smith 18,000 USD\n' +
       'Julie Sanders 14,000 USD\n' +
@@ -63,7 +63,7 @@ controller.hears('Top sales people', ['direct_message', 'direct_mention'], funct
 
 
 
-  controller.hears(['Sales report'], ['direct_message', 'direct_mention'], function (bot, message) {
+  controller.hears(['report'], ['direct_message', 'direct_mention'], function (bot, message) {
   var text = 'Here is your report.'
   var attachments = [{
     fallback: text,
