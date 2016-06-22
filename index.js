@@ -63,6 +63,18 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
     text: text,
     color: '#7CD197'
   }]
+  
+  controller.hears(['PDF'], ['direct_message', 'direct_mention'], function (bot, message) {
+  var text = 'Here is your report.'
+  var attachments = [{
+    fallback: text,
+    pretext: 'Report generated for you',
+    title: 'Host, deploy and share your bot in seconds.',
+    image_url: 'http://aviatioexample.actuate.com:8700/iportal/executereport.do?__locale=en_US&__vp=Default%20Volume&volume=Default%20Volume&closex=true&__executableName=%2FPublic%2FUnshipped%20Orders%201H2013.rptdesign%3B1&__requesttype=immediate&__format=pdf&__wait=True&userID=flightdemo&password=Demo1234',
+    title_link: 'https://beepboophq.com/',
+    text: text,
+    color: '#7CD197'
+  }]
 
   bot.reply(message, {
     attachments: attachments
@@ -74,3 +86,42 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
 controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
   bot.reply(message, 'Sorry <@' + message.user + '>, I don\'t understand. \n')
 })
+
+function login(server, username, password) {
+    $('#output').html("");
+    document.activeElement.blur();
+    var uriLogin = "http://" + server + ":5000/ihub/v1/login";
+    var loginbody = 'username=' + username + '&' + 'password=' + password;
+    if (password) {
+        loginbody = 'username=' + username + '&' + 'password=' + password;
+    } else {
+        loginbody = 'username=' + username;
+    };
+    $.ajax({
+        type: 'POST',
+        data: loginbody,
+        url: uriLogin,
+        dataType: 'json',
+        crossDomain: true,
+        success: function (data, status, jqXHR) {
+            authToken = data.AuthId;
+            $('#output').html("Login success");
+            //after log in enable next steps
+            document.getElementById('fileSelect').disabled = false;
+            //optionally use this to include the authToken on all other Ajax requests
+            //otherwise you must store it somewhere
+            //$.ajaxSetup({
+            //    headers: {'authToken': authToken}
+            //    });
+        },
+        timeout: 7000,
+        error: function (jqXHR, status, errorThrown) {
+            if (jqXHR.status === 0) {
+                $('#output').html("Server not found");
+            } else if (jqXHR.status === 401) {
+                $('#output').html("Authentication failure");
+            } 
+        }
+    });
+    return false;
+};
