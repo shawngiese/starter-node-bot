@@ -66,7 +66,7 @@ controller.hears(['sales chart'], ['direct_message', 'direct_mention'], function
   var attachments = [{
     fallback: text,
     pretext: 'Chart generated for you',
-    title: 'Host, deploy and share your bot in seconds.',
+    title: '',
     //image_url: 'https://core.opentext.com/pdfjs/web/viewer.html?shortLink=69f2882a6a81b20a4657bd30f27e79374cd89918533be113',
     image_url: 'https://core.opentext.com/api/v1/s/69f2882a6a81b20a4657bd30f27e79374cd89918533be113/contents/?access_token=undefined',
     title_link: '',
