@@ -67,7 +67,7 @@ controller.hears(['sales chart'], ['direct_message', 'direct_mention'], function
     fallback: text,
     pretext: 'Chart generated for you',
     title: 'Host, deploy and share your bot in seconds.',
-    image_url: 'http://aviatioexample.actuate.com:8700/iportal/iv;jsessionid=3625A2FC7EAEEECB8F7BB701235F83BE?__ivcmd=getimage&amp;__vp=Default+Volume&amp;Volume=Default+Volume&amp;__ivSessionId=1466605001293_3625A2FC7EAEEECB8F7BB701235F83BE&amp;__report=%2FHome%2Fflightdemo%2FInteractive+Chart+Filtering+Details.RPTDOCUMENT%3B1&amp;__imageID=%2Fdefault+volume%2F%2Fhome%2Fflightdemo%2Finteractive+chart+filtering+details.rptdocument%3B310323000100%2Fen_us%24%24%24%24file%3A%2F%2F%2Fhome%2Fec2-user%2FBIRTiHubVisualization%2Fmodules%2FBIRTiHub%2FiHub%2Fdata%2Fserver%2Ftmp%2FODS_22445_06222016_070610%2Factsn1%2Facws4%2Fcustom2b2600615576ff684a23.png&amp;connectionHandle=3zj%2Feo12%2BXL4NLH3KAqSrUvdxaSYvER1c6HpivlroCc0LUn81D5HtIvAaBBY3WPDHRV2ewlHp8tZO75O6blA2X3l9sCpuqwVCq7MEZx96wcVgMOyrqOmxDb5WMb1mBY284qEpyA9DDZnMba9usUQVuAjLcFWpiVm4%2BxISPUEPNErkxfoW4ovT8G3yjwNvQ0U3jtn%2Bj65%2Falg83SemEr1ihXfz12hK%2FQ%2FmKSyZv1wI4vUx%2BgAKkyd6fMtu1qMCJjH&amp;__mimetype=image%2Fpng',
+    image_url: 'https://core.opentext.com/pdfjs/web/viewer.html?shortLink=69f2882a6a81b20a4657bd30f27e79374cd89918533be113',
     title_link: 'http://aviatioexample.actuate.com:8700/iportal/iv?__locale=en_US&__vp=Default%20Volume&volume=Default%20Volume&closex=true&__report=%2FHome%2Fflightdemo%2FInteractive%20Chart%20Filtering%20Details.RPTDOCUMENT%3B1',
     text: text,
     color: '#7CD197'
