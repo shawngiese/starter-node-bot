@@ -45,12 +45,12 @@ controller.hears('.*', ['mention'], function (bot, message) {
 
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
   var help = 'I can answer the following requests: \n' +
-      '`help` to see this again.'
+      '`help` to see this again.\n' +
       '`hi` for a simple message.\n' +
       '`top sales` to see today\'s top sales agents.\n' +
       '`sales chart` to see today\'s country sales.\n' +
       '`sales report` to see today\'s sales report.\n' +
-      '`@ihub` to demonstrate detecting a mention.\n' +
+      '`@ihub` to demonstrate detecting a mention.' 
   bot.reply(message, help)
 })
 
