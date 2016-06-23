@@ -35,29 +35,31 @@ controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
-  bot.reply(message, 'Hello.')
+  bot.reply(message, 'Hello <@' + message.user + '>.')
   bot.reply(message, 'It\'s nice to talk to you directly.')
 })
 
 controller.hears('.*', ['mention'], function (bot, message) {
-  bot.reply(message, 'You really do care about me. :heart:')
+  bot.reply(message, 'I'm listening.')
 })
 
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
-  var help = 'I will respond to the following messages: \n' +
-      '`bot hi` for a simple message.\n' +
-      '`bot attachment` to see a Slack attachment message.\n' +
-      '`@<your bot\'s name>` to demonstrate detecting a mention.\n' +
-      '`bot help` to see this again.'
+  var help = 'I can answer the following requests: \n' +
+      '`help` to see this again.'
+      '`hi` for a simple message.\n' +
+      '`top sales` to see today\'s top sales agents.\n' +
+      '`sales chart` to see today\'s country sales.\n' +
+      '`sales report` to see today\'s sales report.\n' +
+      '`@ihub` to demonstrate detecting a mention.\n' +
   bot.reply(message, help)
 })
 
-controller.hears('sales data', ['direct_message', 'direct_mention'], function (bot, message) {
+controller.hears('top sales', ['direct_message', 'direct_mention'], function (bot, message) {
   var help = 'The top 5 sales people for today are: \n' +
-      'Bob Smith 18,000 USD\n' +
-      'Julie Sanders 14,000 USD\n' +
-      'Celia Cruthers 14,000 USD\n' +
-      'Nathan Atkins 10,000 USD'
+      '18,000 USD Bob Smith\n' +
+      '14,000 USD Julie Sanders\n' +
+      '14,000 USD Celia Cruthers\n' +
+      '10,000 USD Nathan Atkins'
   bot.reply(message, help)
 })
 
