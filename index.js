@@ -27,7 +27,7 @@ if (token) {
 }
 
 controller.on('bot_channel_join', function (bot, message) {
-  bot.reply(message, "I'm here!")
+  bot.reply(message, "I\'m here!")
 })
 
 controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
@@ -40,7 +40,7 @@ controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
 })
 
 controller.hears('.*', ['mention'], function (bot, message) {
-  bot.reply(message, 'I'm listening.')
+  bot.reply(message, 'I\'m listening.')
 })
 
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
